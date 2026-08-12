@@ -56,12 +56,11 @@ const handleMenuClick = (menuId) => {
   width: 250px;
   background-color: #2c3e50;
   color: #ecf0f1;
-  height: 100%;
   display: flex;
   flex-direction: column;
   padding: 0;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
-  overflow-y: auto;
+  overflow-y: visible;
   flex-shrink: 0;
   box-sizing: border-box;
   margin: 0;
@@ -76,13 +75,20 @@ const handleMenuClick = (menuId) => {
 }
 
 .logo {
-  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  font-size: 1.8rem;
 }
 
 .sidebar-header h1 {
   margin: 0;
   font-size: 1.3rem;
   font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
 }
 
 .user-info {

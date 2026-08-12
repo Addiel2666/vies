@@ -40,23 +40,23 @@ const handleMenuSelect = (menuId) => {
 <style scoped>
 .main-layout {
   display: flex;
-  height: 100%;
   min-height: 100vh;
   width: 100%;
   background-color: #ecf0f1;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
   gap: 0;
 }
 
 .main-content {
   flex: 1;
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
 }

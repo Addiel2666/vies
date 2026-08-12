@@ -6,7 +6,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: visible;
   box-sizing: border-box;
   margin: 0;
 }
@@ -36,9 +36,10 @@ h1 {
   display: flex;
   flex-direction: column;
   flex: 1;
-  overflow: hidden;
+  overflow: visible;
   min-height: 0;
-  margin: 0;
+  margin: 0 0 1.5rem;
+  gap: 1.5rem;
 }
 
 .search-box {
@@ -69,6 +70,7 @@ h1 {
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin-top: 1.5rem;
 }
 
 .data-table thead {
@@ -120,6 +122,9 @@ h1 {
 
 /* Botón principal */
 .btn-open {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 10px 20px;
   background-color: #41b883;
   color: white;
@@ -127,6 +132,7 @@ h1 {
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
 /* Fondo oscuro translúcido */
@@ -148,8 +154,8 @@ h1 {
   background: white;
   padding: 24px;
   border-radius: 8px;
-  min-width: 300px;
-  max-width: 500px;
+  min-width: 50%;
+  max-width: 50%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -164,8 +170,19 @@ h1 {
   cursor: pointer;
 }
 
+.btn-guardar {
+  margin-top: 15px;
+  padding: 8px 16px;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .form-container {
-  max-width: 700px;
+  max-width: 90%;
+  width: min(100%, 90%);
   margin: 2rem auto;
   padding: 1.5rem;
   background: #ffffff;
@@ -301,4 +318,56 @@ textarea {
   .submit-btn {
     width: 100%;
   }
+}
+
+.inputs-row {
+  display: flex;
+  gap: 1rem;
+}
+.inputs-row__input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #d8e0eb;
+  background: #f7f9fc;
+  margin-bottom: 0.5rem;
+}
+.small-text {
+  font-size: 0.5rem;
+}
+
+@media (max-width: 720px) {
+  .inputs-row { 
+    flex-direction: column; 
+    gap: 0.75rem;
+  }
+}
+
+.upload-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 50%;
+}
+
+.btn-upload {
+  padding: 0.6rem 1.2rem;
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-upload:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+/*esta son las dimensiones de la foto*/
+.imagen-pequena {
+  width: 40px;
+  height: 40px;
+  object-fit: cover; 
+  border-radius: 50%;
+  border: 1px solid #4a54a8;
 }
